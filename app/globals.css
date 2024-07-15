@@ -39,15 +39,20 @@ body {
   @keyframes rotate {
     0% {
       transform: rotate(0deg);
+      animation-timing-function: ease-in;
+    }
+    80% {
+      transform: rotate(1440deg); /* 4 tours complets */
+      animation-timing-function: ease-out;
     }
     100% {
-      transform: rotate(360deg);
+      transform: rotate(1620deg); /* Un demi-tour supplémentaire pour ralentir */
     }
   }
-
-  .doughnut-chart {
+  
+  .doghnut-animate {
     /* Autres styles */
-    animation: rotate 10s linear infinite;
+    animation: rotate 5s ease-in-out forwards;
   }
 
   .doughnut-hole {
