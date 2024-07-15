@@ -3,17 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
 }
 
 body {
@@ -29,5 +18,39 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  /* .doughnut-chart {
+    background: conic-gradient(
+      #4caf50 0% 20%,
+      #ff9800 20% 40%,
+      #f44336 40% 60%,
+      #2196f3 60% 80%,
+      #7c3aed 80% 100%
+    );
+  } */
+
+  /* .doughnut-chart {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    position: relative;
+  } */
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .doughnut-chart {
+    /* Autres styles */
+    animation: rotate 10s linear infinite;
+  }
+
+  .doughnut-hole {
+    background: white;
   }
 }
